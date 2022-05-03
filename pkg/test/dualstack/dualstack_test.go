@@ -16,7 +16,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package dualstack_test
+package dualstack
 
 import (
 	"context"
@@ -90,6 +90,7 @@ func testUserCluster(t *testing.T, userclusterClient *kubernetes.Clientset, ipFa
 		for _, node := range nodes.Items {
 			var addrs []string
 			for _, addr := range node.Status.Addresses {
+				fmt.Println(addr)
 				if addr.Type == v1.NodeHostName {
 					continue
 				}
