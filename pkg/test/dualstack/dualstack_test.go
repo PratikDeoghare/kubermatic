@@ -116,7 +116,7 @@ func testUserCluster(t *testing.T, userclusterClient *kubernetes.Clientset, ipFa
 
 		for _, pod := range pods.Items {
 			if pod.Spec.HostNetwork && skipHostNetworkPods {
-				t.Logf("skipping host network pod")
+				t.Logf("skipping host network pod: %s", pod.Name)
 				continue
 			}
 			var podAddrs []string
