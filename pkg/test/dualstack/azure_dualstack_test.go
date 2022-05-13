@@ -143,6 +143,14 @@ func TestCloudClusterIPFamily(t *testing.T) {
 			skipNodes:           true,
 			skipHostNetworkPods: true,
 		},
+		{
+			cloudName:           "azure",
+			osName:              "ubuntu",
+			cni:                 "canal",
+			ipFamily:            util.DualStack,
+			skipNodes:           true,
+			skipHostNetworkPods: true,
+		},
 	}
 
 	var mu sync.Mutex
