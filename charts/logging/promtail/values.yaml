@@ -151,9 +151,9 @@ promtail:
               stages:
                 - json:
                     expressions:
-                      clusterID: clusterID
-                      projectID: projectID
-                      seed: seed
+                      clusterID: ClusterID
+                      projectID: ProjectID
+                      seed: Seed
                 - labels:
                     clusterID:
                     projectID:
